@@ -4,10 +4,10 @@ import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class Ex16CustomQueries01Application {
+public class CustomQueries01Application {
 
 	public static void main(String[] args) {
-		SpringApplication.run(Ex16CustomQueries01Application.class, args);
+		SpringApplication.run(CustomQueries01Application.class, args);
 	}
 
 }

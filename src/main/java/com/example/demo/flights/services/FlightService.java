@@ -24,18 +24,18 @@ public class FlightService {
 
     private String generateRandomString(int length) {
         Random random = new Random();
-        return random.ints(65, 91) // A-Z ASCII range
+        return random.ints(100, 120) // A-Z ASCII range
                 .limit(length)
                 .collect(StringBuilder::new, StringBuilder::appendCodePoint, StringBuilder::append)
                 .toString();
     }
 
     public Collection<Flight> create() {
-        List<Flight> flights = IntStream.range(0, 50)
+        List<Flight> flights = IntStream.range(1, 51)
                 .mapToObj(i -> new Flight(
                         generateRandomString(10),
-                        generateRandomString(3),
-                        generateRandomString(3)
+                        generateRandomString(10),
+                        generateRandomString(10)
                 ))
                 .collect(Collectors.toList());
 
